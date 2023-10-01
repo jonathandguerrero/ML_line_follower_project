@@ -3,12 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Sensor 1
-  - Sensor 2
-  - Sensor 3
-  - Sensor 4
-  - Sensor 5
+  tags: []
   layers:
   - Default
   - TransparentFX

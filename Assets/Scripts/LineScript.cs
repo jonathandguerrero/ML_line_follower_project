@@ -16,7 +16,7 @@ public class LineScript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         //Debug.Log("Se ha detectado una colisión");
 
