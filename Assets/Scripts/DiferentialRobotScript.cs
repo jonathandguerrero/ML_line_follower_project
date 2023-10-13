@@ -21,13 +21,24 @@ public class DiferentialRobotScript : MonoBehaviour
     {
         float motor = maxMotorTorque * Input.GetAxis("Vertical");
         float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
+        // Debug.Log(motor);
+        // Debug.Log(steering);
 
         foreach (AxleInfo axleInfo in axleInfos)
         {
             if (axleInfo.steering)
             {
-                axleInfo.leftWheel.steerAngle = steering;
-                axleInfo.rightWheel.steerAngle = steering;
+                if (steering > 0)
+                {
+                    axleInfo.leftWheel.steerAngle = 0;
+                    axleInfo.rightWheel.steerAngle = steering;
+                }
+                else if(steering < 0)
+                {
+                    axleInfo.leftWheel.steerAngle = steering;
+                    axleInfo.rightWheel.steerAngle = 0;
+                }
+
             }
             if (axleInfo.motor)
             {
