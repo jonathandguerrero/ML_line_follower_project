@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DiferentialRobotScript : MonoBehaviour
+public class ControllerDiferentialRobot : MonoBehaviour
 {
     [System.Serializable]
     public class AxleInfo
