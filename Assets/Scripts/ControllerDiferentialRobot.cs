@@ -17,10 +17,11 @@ public class ControllerDiferentialRobot : MonoBehaviour
     public float maxMotorTorque; // maximum torque the motor can apply to wheel
     public float maxSteeringAngle; // maximum steer angle the wheel can have
 
-    public void FixedUpdate()
+    public void MoveCar(float traction, float address)
     {
-        float motor = maxMotorTorque * Input.GetAxis("Vertical");
-        float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
+ 
+        float motor = maxMotorTorque * traction;
+        float steering = maxSteeringAngle * address;
         // Debug.Log(motor);
         // Debug.Log(steering);
 
