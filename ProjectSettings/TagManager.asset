@@ -12,6 +12,7 @@ TagManager:
   - Sensor 6
   - Sensor 7
   - Sensor 8
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
