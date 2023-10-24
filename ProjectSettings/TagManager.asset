@@ -13,6 +13,7 @@ TagManager:
   - Sensor 7
   - Sensor 8
   - Checkpoint
+  - Walls
   layers:
   - Default
   - TransparentFX

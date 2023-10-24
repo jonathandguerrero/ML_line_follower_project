@@ -10,16 +10,29 @@ public class AgentDiferentialRobot : Agent
 {
     public LineScript lineScript; //Referencia el script
     private ControllerDiferentialRobot _controllerDiferentialRobot;
+    public TrackCheckpoints trackCheckpoints;
 
+   
     //called once at the start
+    
     public override void Initialize()
     {
         _controllerDiferentialRobot = GetComponent<ControllerDiferentialRobot>();
     }
 
+    public override void OnEpisodeBegin()
+    {
+        trackCheckpoints.ResetCheckpoints();
+        _controllerDiferentialRobot.MoveCar(1, 0);
+    }
+
+
     //Recopila observaciones del entorno que el agente utilizará para tomar decisiones
     public override void CollectObservations(VectorSensor sensor)
     {
+        Vector3 CheckpoinForward = trackCheckpoints.nextCheckPointToReach.transform.forward;
+        float dirrectionCar = Vector3.Dot(transform.forward, CheckpoinForward);
+        sensor.AddObservation(dirrectionCar);
 
     }
 
@@ -41,15 +54,16 @@ public class AgentDiferentialRobot : Agent
         action[1] = Input.GetAxis("Horizontal"); // Direccion
     }
 
-
-    private void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        // Access the DetectedSensorTag property and use it.
-        string detectedTag = lineScript.DetectedSensorTag;
+        if (collision.gameObject.tag == "Walls") 
+        {
+            AddReward(-0.5f);
 
-        //Debug.Log("Detected Sensor Tag: " + detectedTag);
-        // You can use detectedTag in your logic here.
+        }
+
     }
+
 
 
 

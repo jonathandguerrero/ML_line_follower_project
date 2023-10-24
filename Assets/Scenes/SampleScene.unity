@@ -716,10 +716,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 618039315}
-  - component: {fileID: 618039316}
   m_Layer: 0
   m_Name: CheckPoints
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -731,9 +730,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618039314}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1267560882}
@@ -741,21 +740,9 @@ Transform:
   - {fileID: 1563855914}
   - {fileID: 1365976575}
   - {fileID: 1256819273}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1354058281}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &618039316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 618039314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b51873e89dbeb51459c9489fc4566b0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &625291912
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,11 +754,11 @@ GameObject:
   - component: {fileID: 625291913}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &625291913
 Transform:
   m_ObjectHideFlags: 0
@@ -789,7 +776,7 @@ Transform:
   - {fileID: 1319467322}
   - {fileID: 2013229984}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &657814811
 GameObject:
@@ -976,7 +963,7 @@ Transform:
   m_GameObject: {fileID: 743638523}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 25, y: 1, z: 0}
-  m_LocalScale: {x: 0.3, y: 2, z: 5}
+  m_LocalScale: {x: 0.3, y: 2, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 625291913}
@@ -1002,7 +989,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743638523}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1795,7 +1782,7 @@ Transform:
   m_GameObject: {fileID: 1256819272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16, y: 1, z: 0}
-  m_LocalScale: {x: 0.1, y: 2, z: 5}
+  m_LocalScale: {x: 0.1, y: 2, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 618039315}
@@ -1905,7 +1892,7 @@ Transform:
   m_GameObject: {fileID: 1267560881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16, y: 1, z: 0}
-  m_LocalScale: {x: 0.1, y: 2, z: 5}
+  m_LocalScale: {x: 0.1, y: 2, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 618039315}
@@ -2015,7 +2002,7 @@ Transform:
   m_GameObject: {fileID: 1303386501}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8, y: 1, z: 0}
-  m_LocalScale: {x: 0.1, y: 2, z: 5}
+  m_LocalScale: {x: 0.1, y: 2, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 618039315}
@@ -2123,7 +2110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319467321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 2.5}
+  m_LocalPosition: {x: 0, y: 1, z: 10.3}
   m_LocalScale: {x: 50, y: 2, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2150,7 +2137,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319467321}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2300,6 +2287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1354058281}
+  - component: {fileID: 1354058282}
   m_Layer: 0
   m_Name: Enviroment
   m_TagString: Untagged
@@ -2321,9 +2309,24 @@ Transform:
   m_Children:
   - {fileID: 1784318421}
   - {fileID: 1136781804}
+  - {fileID: 618039315}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1354058282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354058280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b51873e89dbeb51459c9489fc4566b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentDiferentialRobot: {fileID: 1630827450}
+  nextCheckPointToReach: {fileID: 1267560886}
 --- !u!1 &1365976574
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,7 +2356,7 @@ Transform:
   m_GameObject: {fileID: 1365976574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8, y: 1, z: 0}
-  m_LocalScale: {x: 0.1, y: 2, z: 5}
+  m_LocalScale: {x: 0.1, y: 2, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 618039315}
@@ -2800,7 +2803,7 @@ Transform:
   m_GameObject: {fileID: 1563855913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 0.1, y: 2, z: 5}
+  m_LocalScale: {x: 0.1, y: 2, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 618039315}
@@ -2896,6 +2899,8 @@ GameObject:
   - component: {fileID: 1630827450}
   - component: {fileID: 1630827451}
   - component: {fileID: 1630827452}
+  - component: {fileID: 1630827454}
+  - component: {fileID: 1630827453}
   m_Layer: 0
   m_Name: Diferential robot
   m_TagString: Player
@@ -2911,7 +2916,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630827442}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -22, y: 0, z: 0.004}
+  m_LocalPosition: {x: -17.55, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2929,7 +2934,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630827442}
   serializedVersion: 2
-  m_Mass: 1500
+  m_Mass: 900
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2967,7 +2972,7 @@ MonoBehaviour:
     rightWheel: {fileID: 927242581}
     motor: 1
     steering: 1
-  maxMotorTorque: 400
+  maxMotorTorque: 2000
   maxSteeringAngle: 40
 --- !u!114 &1630827450
 MonoBehaviour:
@@ -2986,6 +2991,7 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
   lineScript: {fileID: 1136781810}
+  trackCheckpoints: {fileID: 1354058282}
 --- !u!114 &1630827451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2999,7 +3005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 0
+    VectorObservationSize: 1
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -3010,7 +3016,7 @@ MonoBehaviour:
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 0}
   m_InferenceDevice: 3
-  m_BehaviorType: 1
+  m_BehaviorType: 0
   m_BehaviorName: AgentDiferentialRobot
   TeamId: 0
   m_UseChildSensors: 1
@@ -3030,6 +3036,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DecisionPeriod: 1
   TakeActionsBetweenDecisions: 1
+--- !u!114 &1630827453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630827442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RaySensorTwo
+  m_DetectableTags:
+  - Walls
+  - Checkpoint
+  m_RaysPerDirection: 1
+  m_MaxRayDegrees: 17
+  m_SphereCastRadius: 0.09
+  m_RayLength: 100
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 51
+  m_ObservationStacks: 1
+  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
+  m_StartVerticalOffset: 0
+  m_EndVerticalOffset: 0
+--- !u!114 &1630827454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630827442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RaySensorOne
+  m_DetectableTags:
+  - Walls
+  - Checkpoint
+  m_RaysPerDirection: 2
+  m_MaxRayDegrees: 75
+  m_SphereCastRadius: 0
+  m_RayLength: 164
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  m_ObservationStacks: 1
+  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
+  m_StartVerticalOffset: 0
+  m_EndVerticalOffset: 0
 --- !u!1 &1654987040
 GameObject:
   m_ObjectHideFlags: 0
@@ -3548,7 +3610,7 @@ Transform:
   m_GameObject: {fileID: 1789980511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -25, y: 1, z: 0}
-  m_LocalScale: {x: 0.3, y: 2, z: 5}
+  m_LocalScale: {x: 0.3, y: 2, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 625291913}
@@ -3574,7 +3636,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789980511}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3644,7 +3706,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013229983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -2.5}
+  m_LocalPosition: {x: 0, y: 1, z: -9.83}
   m_LocalScale: {x: 50, y: 2, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3671,7 +3733,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013229983}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
