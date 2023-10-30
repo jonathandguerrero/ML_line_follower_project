@@ -22,7 +22,7 @@ public class ControllerDiferentialRobot : MonoBehaviour
  
         float motor = maxMotorTorque * traction;
         float steering = maxSteeringAngle * address;
-        Debug.Log(traction);
+        // Debug.Log(traction);
         // Debug.Log(address);
 
         foreach (AxleInfo axleInfo in axleInfos)

@@ -36,7 +36,7 @@ public class TrackCheckpoints : MonoBehaviour
         else 
         {
             // incorrecto
-            Debug.Log("incorrecto");
+            //Debug.Log("incorrecto");
             //agentDiferentialRobot.AddReward(-1f);
         }
     }

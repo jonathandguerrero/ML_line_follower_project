@@ -64,6 +64,15 @@ public class AgentDiferentialRobot : Agent
 
     }
 
+    private void Update()
+    {
+        // Access the DetectedSensorTag property and use it.
+        string detectedTag = lineScript.DetectedSensorTag;
+
+        //Debug.Log("Detected Sensor Tag: " + detectedTag);
+        // You can use detectedTag in your logic here.
+    }
+
 
 
 
