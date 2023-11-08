@@ -23,7 +23,8 @@ public class AgentDiferentialRobot : Agent
     public override void OnEpisodeBegin()
     {
         trackCheckpoints.ResetCheckpoints();
-        _controllerDiferentialRobot.MoveCar(1, 0);
+        _controllerDiferentialRobot.MoveCar(0, 0);
+        transform.position = new Vector3(-20, 0);
     }
 
 
@@ -68,9 +69,59 @@ public class AgentDiferentialRobot : Agent
     {
         // Access the DetectedSensorTag property and use it.
         string detectedTag = lineScript.DetectedSensorTag;
-
-        //Debug.Log("Detected Sensor Tag: " + detectedTag);
         // You can use detectedTag in your logic here.
+
+        switch (detectedTag)
+        {
+            case "Sensor 1":
+                AddReward(-5f);
+                Debug.Log(detectedTag);
+                break;
+            case "Sensor 2":
+                AddReward(-3f);
+                Debug.Log(detectedTag);
+                break;
+            case "Sensor 3":
+                AddReward(-1f);
+                Debug.Log(detectedTag);
+                break;
+            case "Sensor 4":
+                AddReward(+1f);
+                Debug.Log(detectedTag);
+                break;
+            case "Sensor 5":
+                AddReward(+1f);
+                Debug.Log(detectedTag);
+                break;
+            case "Sensor 6":
+                AddReward(-1f);
+                Debug.Log(detectedTag);
+                break;
+            case "Sensor 7":
+                AddReward(-3f);
+                Debug.Log(detectedTag);
+                break;
+            case "Sensor 8":
+                AddReward(-5f);
+                Debug.Log(detectedTag);
+                break;
+        }
+
+        if (trackCheckpoints.recompensa == 1)
+        {
+            AddReward(+10f);
+            // Debug.Log("correcto");
+            trackCheckpoints.recompensa = 0;
+
+            if (trackCheckpoints.finalizar == 1)
+            {
+               // Debug.Log("finalizar");
+                EndEpisode();
+                trackCheckpoints.finalizar = 0;
+            }
+        }
+        
+
     }
 
 

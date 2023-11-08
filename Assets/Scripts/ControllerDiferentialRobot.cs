@@ -34,9 +34,13 @@ public class ControllerDiferentialRobot : MonoBehaviour
                     axleInfo.leftWheel.steerAngle = 0;
                     axleInfo.rightWheel.steerAngle = steering;
                 }
-                else if(steering < 0)
+                else if (steering < 0)
                 {
                     axleInfo.leftWheel.steerAngle = steering;
+                    axleInfo.rightWheel.steerAngle = 0;
+                }
+                else {
+                    axleInfo.leftWheel.steerAngle = 0;
                     axleInfo.rightWheel.steerAngle = 0;
                 }
 

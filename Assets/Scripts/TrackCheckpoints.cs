@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class TrackCheckpoints : MonoBehaviour
 {
-    public AgentDiferentialRobot agentDiferentialRobot;
+    //public AgentDiferentialRobot agentDiferentialRobot;
     public CheckpointSingle nextCheckPointToReach;
     
     private List<CheckpointSingle> checkpointSingleList;
     private int nextCheckpointSingleIndex;
+    public int recompensa;
+    public int finalizar;
     private void Awake()
     {
         Transform checkpointsTransform = transform.Find("CheckPoints");
@@ -29,10 +31,20 @@ public class TrackCheckpoints : MonoBehaviour
         if (checkpointSingleList.IndexOf(checkpointSingle) == nextCheckpointSingleIndex)
         {
             //Correcto
-            Debug.Log("correcto");
-            nextCheckpointSingleIndex = (nextCheckpointSingleIndex + 1) % checkpointSingleList.Count;
-            agentDiferentialRobot.AddReward (+10f);
+            //Debug.Log("correcto");
+            recompensa = 1;
+            nextCheckpointSingleIndex = (nextCheckpointSingleIndex + 1) % checkpointSingleList.Count; 
+            //agentDiferentialRobot.AddReward (+10f);
+
+
+            if (checkpointSingleList.IndexOf(checkpointSingle) == (checkpointSingleList.Count-1)) {
+                
+                finalizar = 1;
+                //agentDiferentialRobot.EndEpisode(); // Finalizar entrenamiento
+                // Debug.Log("finalizado");
+            }
         }
+ 
         else 
         {
             // incorrecto
