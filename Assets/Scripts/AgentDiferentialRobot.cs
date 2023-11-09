@@ -23,8 +23,8 @@ public class AgentDiferentialRobot : Agent
     public override void OnEpisodeBegin()
     {
         trackCheckpoints.ResetCheckpoints();
-        _controllerDiferentialRobot.MoveCar(0, 0);
-        transform.position = new Vector3(-20, 0);
+        _controllerDiferentialRobot.MoveCar(1, 0);
+        transform.localPosition = new Vector3(-17, 0);
     }
 
 
@@ -74,11 +74,11 @@ public class AgentDiferentialRobot : Agent
         switch (detectedTag)
         {
             case "Sensor 1":
-                AddReward(-5f);
+                EndEpisode();
                 Debug.Log(detectedTag);
                 break;
             case "Sensor 2":
-                AddReward(-3f);
+                AddReward(-10f);
                 Debug.Log(detectedTag);
                 break;
             case "Sensor 3":
@@ -98,11 +98,11 @@ public class AgentDiferentialRobot : Agent
                 Debug.Log(detectedTag);
                 break;
             case "Sensor 7":
-                AddReward(-3f);
+                AddReward(-10f);
                 Debug.Log(detectedTag);
                 break;
             case "Sensor 8":
-                AddReward(-5f);
+                EndEpisode();
                 Debug.Log(detectedTag);
                 break;
         }
